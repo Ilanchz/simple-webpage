@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            A To-Do List
+        </title>
+    </head>
+    <body>
+        
+        <% if (locals.givenJobs){ %>
+            <ul>
+                <% for (let i=0;i<(givenJobs).length;i++){ %>
+                    <li><%= givenJobs[i] %></li>
+                <% } %>
+            </ul>
+            
+
+        <% }else{ %>
+            <h1>Add To Do Event to the Page!</h1>
+        <% } %>
+
+        <form action="/add" method="POST">
+            <label for="Job">Enter Task</label>
+            <input type="text" name="task">
+            <input type="submit" value="Add">
+        </form>
+    </body>
+</html>
