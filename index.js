@@ -20,5 +20,5 @@ app.get("/",(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("Listening on port 3000... Server On"); //Add comment server on
+    console.log("Listening on port 3000../"); //Plain old representation
 })
